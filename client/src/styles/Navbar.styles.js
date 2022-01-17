@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components/macro";
 import { Link } from "react-router-dom";
+import Bars from "../images/Bars.svg";
 
 export const Nav = styled.nav`
   height: 60px;
@@ -29,12 +30,30 @@ export const Logo = styled(Link)`
 `;
 export const MenuBars = styled.i`
   display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    background-image: url(${Bars});
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-50%, 25%)
+
+  }
 `;
 
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   margin-right: -48px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 export const NavMenuLinks = styled(Link)`
   ${NavLink}
@@ -44,4 +63,8 @@ export const NavBtn = styled.div`
   display: flex;
   align-items: center;
   margin-right: 24px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
