@@ -31,6 +31,7 @@ export const MenuBars = styled.i``;
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
+  margin-right: -48px;
 `;
 export const NavMenuLinks = styled(Link)`
   ${NavLink}
