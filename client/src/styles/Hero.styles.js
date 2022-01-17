@@ -16,3 +16,10 @@ export const HeroWrapper = styled.div`
   overflow: hidden;
   position: relative;
 `;
+
+export const HeroSlide = styled.div`
+`
+
+export const HeroSlider = styled.div``
+export const HeroImage = styled.div``
+export const HeroContent = styled.div``

@@ -1,3 +1,8 @@
+import ImageOne from '../images/TexasTacoBajaShrimp.jpeg'
+import ImageTwo from '../images/TexasTacoBarbacoa.jpeg'
+import ImageThree from '../images/TexasTacoAlPastor.jpeg'
+import ImageFour from '../images/TexasTacoFajita.jpeg'
+
 export const SliderData = [
   {
     title: 'Taco of the month',
