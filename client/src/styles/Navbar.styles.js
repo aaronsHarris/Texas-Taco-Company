@@ -27,7 +27,10 @@ export const Logo = styled(Link)`
   color: #fff;
   /* font-style: italic; */
 `;
-export const MenuBars = styled.i``;
+export const MenuBars = styled.i`
+  display: none;
+`;
+
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
