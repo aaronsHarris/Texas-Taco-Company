@@ -3,13 +3,20 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import { SliderData } from "./data/SliderData";
 import GlobalStyle from "./styles/GlobalStyles.styles";
+import { useState } from "react";
+
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () =>{
+    setIsOpen(!isOpen)
+  }
   return (
     <>
       <GlobalStyle />
-      <Navbar />
-      <Dropdown />
+      <Navbar toggle={toggle}/>
+      <Dropdown isOpen={isOpen} toggle={toggle}/>
       <Hero slides={SliderData} />
     </>
   );
