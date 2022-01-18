@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useRef } from "react";
 import { Button } from "../styles/Button.styles";
 import {
   HeroSection,
@@ -13,17 +13,25 @@ import {
   PrevArrow,
 } from "../styles/Hero.styles";
 
-
-
 const Hero = ({ slides }) => {
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
+  const timeout = useRef(null);
+
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
   return (
     <HeroSection>
       <HeroWrapper>
         {slides.map((slide, index) => {
           return (
-            <HeroSlide key={index}>
-              <HeroSlider>
-                <HeroImage src={slide.image} alt={slide.alt}/>
+            <HeroSlide key={index}> {index===current && (<HeroSlider>
+                <HeroImage src={slide.image} alt={slide.alt} />
                 <HeroContent>
                   <h1>{slide.title}</h1>
                   <p>{slide.price}</p>
@@ -38,15 +46,16 @@ const Hero = ({ slides }) => {
                     <Arrow />
                   </Button>
                 </HeroContent>
-              </HeroSlider>
+              </HeroSlider>)}
+
             </HeroSlide>
           );
         })}
         <SliderButtons>
-        <PrevArrow />
-        <NextArrow />
+          <PrevArrow onClick={prevSlide} />
+          <NextArrow onClick={nextSlide} />
         </SliderButtons>
-        </HeroWrapper>
+      </HeroWrapper>
     </HeroSection>
   );
 };

@@ -84,7 +84,7 @@ export const HeroContent = styled.div`
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   }
 `;
-export const Arrow = styled(IoMdArrowRoundForward)``;
+export const Arrow = styled(IoMdArrowRoundForward)`margin-left: 0.5rem`;
 
 export const SliderButtons = styled.div`
   position: absolute;
