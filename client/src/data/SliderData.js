@@ -13,15 +13,15 @@ export const SliderData = [
     alt: 'Taco'
   },
   {
-    title: 'All the tacos',
-    price: '$',
+    title: 'Taco of the month',
+    price: '$4',
     path: '/menu',
     label: 'view taco',
     image: ImageTwo,
     alt: 'Taco'
   },
   {
-    title: 'Catering',
+    title: 'Taco of the Month',
     price: '$100',
     path: '/menu',
     label: 'view taco',
@@ -29,7 +29,7 @@ export const SliderData = [
     alt: 'Taco'
   },
   {
-    title: 'Chef Aaron',
+    title: 'Taco of the Month',
     price: '$1',
     path: '/menu',
     label: 'view taco',

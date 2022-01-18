@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../styles/Button.styles";
 import {
   HeroSection,
   HeroWrapper,
@@ -6,8 +7,15 @@ import {
   HeroSlider,
   HeroImage,
   HeroContent,
+  Arrow,
+  SliderButtons,
+  NextArrow,
+  PrevArrow,
 } from "../styles/Hero.styles";
-const Hero = ({slides}) => {
+
+
+
+const Hero = ({ slides }) => {
   return (
     <HeroSection>
       <HeroWrapper>
@@ -15,15 +23,30 @@ const Hero = ({slides}) => {
           return (
             <HeroSlide key={index}>
               <HeroSlider>
-                <HeroImage />
+                <HeroImage src={slide.image} alt={slide.alt}/>
                 <HeroContent>
                   <h1>{slide.title}</h1>
+                  <p>{slide.price}</p>
+                  <Button
+                    to={slide.path}
+                    primary="true"
+                    css={`
+                      max-width: 160px;
+                    `}
+                  >
+                    {slide.label}
+                    <Arrow />
+                  </Button>
                 </HeroContent>
               </HeroSlider>
             </HeroSlide>
           );
         })}
-      </HeroWrapper>
+        <SliderButtons>
+        <PrevArrow />
+        <NextArrow />
+        </SliderButtons>
+        </HeroWrapper>
     </HeroSection>
   );
 };
