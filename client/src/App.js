@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 import { SliderData } from "./data/SliderData";
 import GlobalStyle from "./styles/GlobalStyles.styles";
 import { useState } from "react";
-import Locations from "./components/Locations";
 import {LocationData} from './data/LocationData'
+import LocationInfo from "./components/LocationInfo";
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
       <Navbar toggle={toggle}/>
       <Dropdown isOpen={isOpen} toggle={toggle}/>
       <Hero slides={SliderData} />
-      <Locations restaurants={LocationData}/>
+      <LocationInfo restaurants={LocationData}/>
     </>
   );
 }

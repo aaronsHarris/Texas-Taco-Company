@@ -1,22 +1,12 @@
 import styled from "styled-components";
 
 export const LocationSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  
+  margin: 2rem 4rem;
+`;
 
-`;
-export const LocationWrapper = styled.div``;
-export const Restaurants = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  justify-content: center;
-  align-items: center;
-`;
-export const LocationImg = styled.img`
-  max-height: 20rem;
-  overflow: hidden;
-  border-radius: 1rem;
-`;
-export const LocationHeading = styled.div``;
+export const Container = styled.div``
+export const Locations = styled.div``
+export const Restaurants = styled.div``
+export const Restaurant = styled.div``
+export const RestaurantImage = styled.img``
+export const RestaurantHeading = styled.div``
