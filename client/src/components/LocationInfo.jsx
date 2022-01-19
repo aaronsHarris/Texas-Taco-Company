@@ -1,7 +1,9 @@
 import React from "react";
-import { Title } from "../styles/Title.styles";
+import { Button } from "../styles/Button.styles";
+
 import {
   LocationSection,
+  Title,
   Container,
   Locations,
   Restaurant,
@@ -22,6 +24,7 @@ const LocationInfo = ({ restaurants }) => {
             <Restaurant key={index}>
               <RestaurantImage src={restaurant.image} />
               <RestaurantHeading>{restaurant.heading}</RestaurantHeading>
+              <Button primary='true'>Order Now</Button>
             </Restaurant>
           ))}
         </Locations>
