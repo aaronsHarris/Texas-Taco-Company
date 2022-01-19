@@ -55,7 +55,7 @@ const Hero = ({ slides }) => {
         {slides.map((slide, index) => {
           return (
             <HeroSlide key={index}>
-              {" "}
+              
               {index === current && (
                 <HeroSlider>
                   <HeroImage src={slide.image} alt={slide.alt} />
